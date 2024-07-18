@@ -171,9 +171,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 699988865718938700, guid: 36f841af1afcba040b9a74bd7a24333c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 36f841af1afcba040b9a74bd7a24333c, type: 3}
       propertyPath: m_Name
       value: Natsuhi
+      objectReference: {fileID: 0}
+    - target: {fileID: 3044126888706117429, guid: 36f841af1afcba040b9a74bd7a24333c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
