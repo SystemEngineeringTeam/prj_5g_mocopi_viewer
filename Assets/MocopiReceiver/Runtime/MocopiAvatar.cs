@@ -3,6 +3,7 @@
  */
 using System.Collections.Generic;
 using System.Linq;
+using JetBrains.Annotations;
 using UnityEngine;
 
 namespace Mocopi.Receiver
@@ -14,6 +15,9 @@ namespace Mocopi.Receiver
     public sealed class MocopiAvatar : MocopiAvatarBase
     {
         #region --Fields--
+
+        public GameObject camera;
+        
         /// <summary>
         /// Table of mocopi sensor bone information
         /// </summary>
@@ -571,6 +575,15 @@ namespace Mocopi.Receiver
                 }
 
                 GameObject obj = new GameObject(boneName);
+                
+                // cameraをobjの名前がrootの場合に子供に設定
+                if (camera != null)
+                {
+                    if (boneName == "root")
+                    {
+                        camera.transform.SetParent(obj.transform);
+                    }
+                }
 
                 // align with Unity's coordinate space
                 Vector3 position = this.ConvertPluginDataToVector3(
